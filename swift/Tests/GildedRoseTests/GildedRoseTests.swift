@@ -24,9 +24,9 @@ class GildedRoseTests: XCTestCase {
     func testUpdateQuality() {
         let tests: [(item: Item, sellIn: Int, quality: Int)] = [
             (Item(name: "Standard", sellIn: 10, quality: 20), 9, 19),
-            (Item(name: "Aged Brie", sellIn: 2, quality: 0), 1, 1), // default
-            (Item(name: "Sulfuras, Hand of Ragnaros", sellIn: 10, quality: 80), 10, 80), // default
-            (Item(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 20, quality: 19), 19, 20), // default
+            (Item(name: "Aged Brie", sellIn: 2, quality: 0), 1, 1),
+            (Item(name: "Sulfuras, Hand of Ragnaros", sellIn: 10, quality: 80), 10, 80),
+            (Item(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 20, quality: 19), 19, 20),
             (Item(name: "Conjured Mana Cake", sellIn: 10, quality: 20), 9, 18),
         ]
         
