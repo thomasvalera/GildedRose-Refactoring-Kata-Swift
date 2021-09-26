@@ -1,10 +1,5 @@
 # Gilded Rose Refactoring Kata
-
-This Kata was forked from EmilyBache's GitHub [here](https://github.com/emilybache/GildedRose-Refactoring-Kata).
-
-======================================
-Gilded Rose Requirements Specification
-======================================
+## Requirements Specification
 
 Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a
 prominent city ran by a friendly innkeeper named Allison. We also buy and sell only the finest goods.
@@ -40,3 +35,5 @@ for you).
 
 Just for clarification, an item can never have its Quality increase above 50, however "Sulfuras" is a
 legendary item and as such its Quality is 80 and it never alters.
+
+_This Kata was forked from EmilyBache's GitHub [here](https://github.com/emilybache/GildedRose-Refactoring-Kata)._
