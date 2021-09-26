@@ -29,20 +29,20 @@ class GildedRoseTests: XCTestCase {
             (Item(name: "Standard", sellIn: 0, quality: 20), -1, 18), // just passed
             (Item(name: "Standard", sellIn: -3, quality: 20), -4, 18), // passed
             (Item(name: "Standard", sellIn: -3, quality: 0), -4, 0), // passed minimum quality
-            
+
             // Aged Brie
             (Item(name: "Aged Brie", sellIn: 2, quality: 0), 1, 1), // default
             (Item(name: "Aged Brie", sellIn: 1, quality: 10), 0, 11), // last day
             (Item(name: "Aged Brie", sellIn: 0, quality: 12), -1, 14), // just passed
             (Item(name: "Aged Brie", sellIn: -10, quality: 12), -11, 14), // passed
             (Item(name: "Aged Brie", sellIn: -10, quality: 50), -11, 50), // passed with max quality reached
-            
+
             // Sulfuras
             (Item(name: "Sulfuras, Hand of Ragnaros", sellIn: 10, quality: 80), 10, 80), // default
             (Item(name: "Sulfuras, Hand of Ragnaros", sellIn: 1, quality: 80), 1, 80), // last day
             (Item(name: "Sulfuras, Hand of Ragnaros", sellIn: 0, quality: 80), 0, 80), // just passed
             (Item(name: "Sulfuras, Hand of Ragnaros", sellIn: -10, quality: 80), -10, 80), // passed
-            
+
             // Backstage passes
             (Item(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 20, quality: 19), 19, 20), // default
             (Item(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 11, quality: 20), 10, 21), // 11 days
@@ -60,7 +60,7 @@ class GildedRoseTests: XCTestCase {
         }
         
         let gildedRose = GildedRose(items: items)
-        gildedRose.updateQuality()
+        gildedRose.updateItems()
         
         tests.forEach { test in
             XCTAssertEqual(test.item.sellIn, test.sellIn, "Failed sellIn \(test.item.name). Expected: \(test.sellIn), received: \(test.item.sellIn)")
@@ -83,7 +83,7 @@ class GildedRoseTests: XCTestCase {
         }
         
         let gildedRose = GildedRose(items: items)
-        gildedRose.updateQuality()
+        gildedRose.updateItems()
         
         tests.forEach { test in
             XCTAssertEqual(test.item.sellIn, test.sellIn, "Failed sellIn \(test.item.name). Expected: \(test.sellIn), received: \(test.item.sellIn)")

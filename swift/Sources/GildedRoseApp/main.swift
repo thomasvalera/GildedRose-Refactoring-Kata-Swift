@@ -27,5 +27,5 @@ for i in 0..<days {
         print(item);
     }
     print("");
-    app.updateQuality();
+    app.updateItems();
 }
